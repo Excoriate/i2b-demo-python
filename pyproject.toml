@@ -1,0 +1,20 @@
+[project]
+name = "i2b-demo-python"
+version = "0.1.0"
+description = "FastAPI service using CouchDB, managed with uv."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.100.0",             # Modern web framework for APIs
+    "uvicorn[standard]>=0.20.0",    # ASGI server to run FastAPI
+    "pycouchdb>=1.10",              # Client library for CouchDB (alternative)
+    "python-dotenv>=1.0.0",         # For loading .env files
+    "pydantic>=2.0.0",              # Data validation and settings management
+    "pydantic-settings>=2.0.0",     # For loading settings from .env using Pydantic
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",                # Testing framework
+    "httpx>=0.24.0",                # Async HTTP client, needed for FastAPI TestClient
+]

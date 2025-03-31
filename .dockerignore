@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile*
+
+# Project mgmt/docs
+README.md
+justfile
+
+# Python Virtual Env / Caches
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.uv_cache
+*.egg-info
+dist
+build
+htmlcov
+.coverage*
+
+# IDE / OS specific
+.vscode
+.history
+.DS_Store
+Thumbs.db
+
+# Secrets (allow example)
+.env*
+!.env.example
+
+# Empty dir marker
+config/.gitkeep
