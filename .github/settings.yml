@@ -1,8 +1,8 @@
 ---
 repository:
-  name: seko-web
+  name: i2b-demo-python
   description: Single Pane of Glass for Developer Workflow Management
-  homepage: https://github.com/seko-saas/seko-web
+  homepage: https://github.com/makemyinfra-prospects/i2b-demo-python
   topics:
     - developer-productivity
     - github

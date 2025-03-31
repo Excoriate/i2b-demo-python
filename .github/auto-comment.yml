@@ -2,7 +2,7 @@
 # Comprehensive Pull Request Checklist and Guidelines
 
 pullRequestOpened: |-
-  🚀 Thank you for contributing to Seko Web!
+  🚀 Thank you for contributing to i2b-demo-python!
 
   Before we can merge this Pull Request, please ensure the following checklist is completed:
 
@@ -50,7 +50,7 @@ pullRequestOpened: |-
   3. Be responsive to feedback
   4. Celebrate your contribution! 🎉
 
-  Thank you for helping improve Seko Web! 💡
+  Thank you for helping improve i2b-demo-python! 💡
 
 # Configuration for Pull Request Labels
 labelPRBasedOnBranchName: true

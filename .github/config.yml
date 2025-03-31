@@ -3,7 +3,7 @@
 
 # Welcome message for first-time issue creators
 newIssueWelcomeComment: >
-  🎉 Thanks for opening your first issue in the Seko Web repository!
+  🎉 Thanks for opening your first issue in the i2b-demo-python repository!
 
   Before we dive in, please ensure you've:
   - Checked existing issues to avoid duplicates
@@ -11,11 +11,11 @@ newIssueWelcomeComment: >
   - Provided clear, reproducible steps if reporting a bug
   - Included context about your use case for feature requests
 
-  Our maintainers will review your issue soon. We appreciate your contribution to making Seko Web better! 🚀
+  Our maintainers will review your issue soon. We appreciate your contribution to making i2b-demo-python better! 🚀
 
 # Welcome message for first-time pull request contributors
 newPRWelcomeComment: >
-  👏 Congratulations on creating your first pull request in the Seko Web repository!
+  👏 Congratulations on creating your first pull request in the i2b-demo-python repository!
 
   We're excited to review your contribution. Please make sure you've:
   - Read our CONTRIBUTING.md guidelines
@@ -24,13 +24,13 @@ newPRWelcomeComment: >
   - Updated documentation if needed
   - Ensured code follows our style guidelines
 
-  Our maintainers will review your PR and provide feedback. Thank you for helping improve Seko Web! 💡
+  Our maintainers will review your PR and provide feedback. Thank you for helping improve i2b-demo-python! 💡
 
 # Congratulatory message for first PR merge
 firstPRMergeComment: >-
   🎊 Congratulations on merging your first pull request!
 
-  You're now an official contributor to Seko Web. Your hard work and dedication help make this project better for everyone.
+  You're now an official contributor to i2b-demo-python. Your hard work and dedication help make this project better for everyone.
 
   Some next steps:
   - Join our community discussions
