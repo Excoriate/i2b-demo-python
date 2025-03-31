@@ -1,0 +1,63 @@
+---
+# Comprehensive Pull Request Checklist and Guidelines
+
+pullRequestOpened: |-
+  🚀 Thank you for contributing to Seko Web!
+
+  Before we can merge this Pull Request, please ensure the following checklist is completed:
+
+  ### 📋 Contribution Checklist
+
+  #### Code Quality
+  - [ ] Code follows project's coding standards
+  - [ ] Code is well-documented and includes inline comments
+  - [ ] No unnecessary commented-out code
+  - [ ] Appropriate error handling implemented
+
+  #### Testing
+  - [ ] Added/updated unit tests
+  - [ ] Added/updated integration tests
+  - [ ] All tests pass locally
+  - [ ] Test coverage maintained or improved
+
+  #### Documentation
+  - [ ] Updated relevant documentation in `docs/`
+  - [ ] Updated code comments
+  - [ ] Updated README if necessary
+  - [ ] Added/updated API documentation (if applicable)
+
+  #### Project Requirements
+  - [ ] Linked to GitHub issue with discussion and accepted design
+  - [ ] Follows project's contribution guidelines
+  - [ ] Commits are atomic and have clear, descriptive messages
+  - [ ] No unnecessary files included (e.g., IDE configs, temp files)
+
+  #### Review Preparation
+  - [ ] Rebased against the latest `main` branch
+  - [ ] Resolved any merge conflicts
+  - [ ] Squashed commits for a clean history (if needed)
+  - [ ] Re-reviewed `Files changed` in the GitHub PR explorer
+
+  #### Additional Considerations
+  - [ ] Performance implications considered
+  - [ ] Security best practices followed
+  - [ ] Accessibility improvements (if applicable)
+  - [ ] Internationalization/localization support (if applicable)
+
+  ### 🤝 Next Steps
+  1. Complete the checklist above
+  2. Request a review from maintainers
+  3. Be responsive to feedback
+  4. Celebrate your contribution! 🎉
+
+  Thank you for helping improve Seko Web! 💡
+
+# Configuration for Pull Request Labels
+labelPRBasedOnBranchName: true
+labelPRBasedOnIssueLabels: true
+
+# Automatic Project Board Integration
+autoAssignProject: true
+projectBoards:
+  - name: Development Roadmap
+    column: In Progress

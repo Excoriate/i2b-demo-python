@@ -15,7 +15,7 @@ COPY pyproject.toml ./
 # Install dependencies using uv
 # This installs dependencies into the system site-packages within this stage
 # We don't need dev dependencies for the final image
-RUN uv pip install --system --no-deps .
+RUN uv pip install --system .
 
 # Stage 2: Final Stage - Setup the runtime environment
 # Use the same slim base image
@@ -31,6 +31,9 @@ RUN addgroup --system --gid 1001 appgroup && \
 # Copy installed dependencies from the builder stage's site-packages
 # Adjust the path according to the Python version's site-packages location
 COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+
+# Copy installed executables (like uvicorn) from the builder stage
+COPY --from=builder /usr/local/bin /usr/local/bin
 
 # Copy the application source code
 COPY ./src ./src

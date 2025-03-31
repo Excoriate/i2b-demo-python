@@ -18,7 +18,28 @@ UV := "uv"
 
 # 📋 List available recipes
 default:
-    @just --list # Alternative way to list recipes
+    @echo "🐍 Python Project Recipes 🚀"
+    @echo ""
+    @echo "--- Local Development ---"
+    @echo "  venv           Create virtual environment using uv (if not exists)"
+    @echo "  install        Create venv (if needed) and install dependencies"
+    @echo "  sync           Sync environment with pyproject.toml dependencies"
+    @echo "  run / serve    Run the development server (uvicorn)"
+    @echo "  test           Run tests using pytest"
+    @echo "  lint           Run linters (TODO)"
+    @echo "  format         Run code formatters (TODO)"
+    @echo ""
+    @echo "--- Docker Compose ---"
+    @echo "  compose-build  Build Docker images for services"
+    @echo "  compose-up     Start all services using Docker Compose (detached)"
+    @echo "  compose-down   Stop and remove all services, networks, and volumes"
+    @echo "  compose-logs   Follow logs for the 'app' service"
+    @echo "  db-up          Start only the CouchDB service (detached)"
+    @echo "  db-down        Stop only the CouchDB service"
+    @echo ""
+    @echo "--- Cleanup ---"
+    @echo "  clean          Clean Python cache files and build artifacts"
+    # @just --list # Alternative way to list recipes
 
 # 📦 Create virtual environment using uv (if not exists)
 venv:
@@ -104,3 +125,13 @@ compose-down:
 compose-logs:
     @echo ">>> Following logs for 'app' service (Ctrl+C to stop)..."
     @docker compose logs -f app
+
+# 🐳 Start only the CouchDB service (detached mode)
+db-up:
+    @echo ">>> Starting CouchDB service..."
+    @docker compose up -d db
+
+# 🐳 Stop only the CouchDB service
+db-down:
+    @echo ">>> Stopping CouchDB service..."
+    @docker compose stop db

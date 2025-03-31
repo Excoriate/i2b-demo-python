@@ -1,0 +1,58 @@
+---
+# Configuration for issue and PR staleness
+
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 14
+
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 7
+
+# Issues with these labels will never be considered stale
+exemptLabels:
+  - pinned
+  - security
+  - priority-high
+  - bug
+  - good-first-issue
+
+# Label to use when marking an issue as stale
+staleLabel: wontfix
+
+# Comment to post when marking an issue as stale
+markComment: >
+  👋 This issue has been automatically marked as stale because it has not had recent activity.
+
+  If this issue is still relevant, please:
+  - Comment with an update
+  - Explain why the issue is still important
+  - Provide additional context or steps to resolve
+
+  If no further activity occurs, the issue will be closed in 7 days. Thank you for your contributions! 🙏
+
+# Comment to post when closing a stale Issue or Pull Request
+closeComment: >-
+  🔒 This issue has been automatically closed due to inactivity.
+
+  If you believe this was closed in error, please:
+  - Reopen the issue
+  - Provide additional context
+  - Explain why this issue is still relevant
+
+# Limit to specific issue types
+only: issues
+
+# Perform stale check on pull requests
+pulls:
+  daysUntilStale: 21
+  daysUntilClose: 10
+  markComment: >
+    👋 This pull request has been marked as stale due to inactivity.
+
+    Please update the PR or provide a reason why it should remain open.
+
+    If no activity occurs, it will be closed in 10 days.
+
+  closeComment: >-
+    🚫 This pull request has been automatically closed due to prolonged inactivity.
+
+    Feel free to reopen if you wish to continue working on this PR.

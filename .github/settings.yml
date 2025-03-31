@@ -1,0 +1,133 @@
+---
+repository:
+  name: seko-web
+  description: Single Pane of Glass for Developer Workflow Management
+  homepage: https://github.com/seko-saas/seko-web
+  topics:
+    - developer-productivity
+    - github
+    - gitlab
+    - task-management
+    - ai-powered
+    - workflow-optimization
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: true
+  delete_branch_on_merge: true
+  has_projects: true
+  has_wiki: true
+  has_discussions: true
+  enable_vulnerability_alerts: true
+  enable_automated_security_fixes: true
+
+  # Comprehensive Branch Protection Rules for Main Branch
+  branch_protection:
+    - pattern: main
+      required_pull_request_reviews:
+        required_approving_review_count: 1  # Minimum 1 approval
+        dismiss_stale_reviews: true  # Dismiss outdated reviews
+        require_code_owner_reviews: true  # Require code owner review
+        dismissal_restrictions:
+          users: [Excoriate]  # Users who can dismiss reviews
+          teams: []
+
+      required_status_checks:
+        strict: true  # Require branch to be up to date before merging
+        contexts:
+          - ci/github-actions/pr  # Required CI checks
+          - code-quality/lint
+          - tests/unit
+          - tests/integration
+          - security/scan
+
+      # Enhanced branch protection settings
+      enforce_admins: true  # Apply rules to admins as well
+      required_linear_history: true  # Enforce linear commit history
+      allow_force_pushes: false  # Prevent force pushes
+      allow_deletions: false  # Prevent branch deletion
+
+      # Optional: Deployment checks
+      required_deployment_environments:
+        - staging
+        - production
+
+      # Restrictions on who can push
+      restrictions:
+        users: [Excoriate]  # Specific users allowed to push
+        teams:
+          - maintainers  # Teams with push access
+
+teams:
+  - name: maintainers
+    permission: admin
+  - name: contributors
+    permission: push
+  - name: reviewers
+    permission: read
+
+labels:
+  # Core Issue Types
+  - name: bug
+    color: CC0000
+    description: Critical issue affecting core functionality 🐛
+  - name: feature
+    color: 336699
+    description: New product capability or enhancement 🚀
+  - name: improvement
+    color: 84b6eb
+    description: Incremental enhancement to existing functionality 🔧
+
+  # Technical Categories
+  - name: platform-integration
+    color: 1d76db
+    description: GitHub, GitLab, or other platform connectivity
+  - name: performance
+    color: fbca04
+    description: Optimization and speed-related improvements
+  - name: security
+    color: d93f0b
+    description: Security vulnerabilities or hardening efforts 🔒
+
+  # Development Process
+  - name: help-wanted
+    color: 008672
+    description: Community contributions welcome 🙏
+  - name: good-first-issue
+    color: 7057ff
+    description: Beginner-friendly tasks for new contributors
+  - name: documentation
+    color: 0075ca
+    description: Improvements to docs, README, or project guides 📚
+
+  # AI and Advanced Features
+  - name: ai-enhancement
+    color: 5319e7
+    description: AI-powered feature or improvement 🤖
+  - name: workflow-automation
+    color: 6f42c1
+    description: Automation of developer workflows
+
+  # Infrastructure and Tooling
+  - name: infrastructure
+    color: 6a737d
+    description: Changes to infrastructure, CI/CD, or deployment
+  - name: dependencies
+    color: 0366d6
+    description: Updates to project dependencies or package management
+
+  # Priority and Impact
+  - name: priority-high
+    color: d73a49
+    description: Urgent issue requiring immediate attention
+  - name: priority-low
+    color: 4a4a4a
+    description: Non-critical enhancement or minor fix
+
+  # Context and Platform Labels
+  - name: context-toolchain
+    color: 2c3e50
+    description: Relates to development toolchain and infrastructure setup 🛠️
+  - name: saas-platform
+    color: 34495e
+    description: Core SaaS platform architecture and capabilities ☁️

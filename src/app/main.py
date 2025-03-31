@@ -1,15 +1,12 @@
 from fastapi import FastAPI
+from .api.v1 import endpoints as v1_endpoints
+from .core.config import settings
 
-# TODO: Import API routers once created, e.g.:
-# from .api.v1 import endpoints as v1_endpoints
-# from .core.config import settings # Assuming settings are loaded here
+# Initialize FastAPI app using settings
+app = FastAPI(title=settings.PROJECT_NAME)
 
-# Initialize FastAPI app
-# TODO: Add project metadata like title, version from pyproject.toml or settings
-app = FastAPI(title="i2b-demo-python API")
-
-# TODO: Include API routers
-# app.include_router(v1_endpoints.router, prefix="/api/v1")
+# Include API routers
+app.include_router(v1_endpoints.router, prefix=settings.API_V1_STR)
 
 @app.get("/")
 async def read_root():
@@ -29,6 +26,9 @@ async def read_root():
 #     # Close DB connection, etc.
 #     pass
 
+# Note: The main guard below is primarily for debugging.
+# In production, use `just run` or Docker/Compose which calls uvicorn directly.
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Use settings for host/port when running directly
+    uvicorn.run(app, host=settings.APP_HOST, port=settings.APP_PORT)

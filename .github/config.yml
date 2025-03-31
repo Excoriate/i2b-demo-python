@@ -1,0 +1,54 @@
+---
+# Configuration for repository interactions and welcome messages
+
+# Welcome message for first-time issue creators
+newIssueWelcomeComment: >
+  🎉 Thanks for opening your first issue in the Seko Web repository!
+
+  Before we dive in, please ensure you've:
+  - Checked existing issues to avoid duplicates
+  - Followed our issue template
+  - Provided clear, reproducible steps if reporting a bug
+  - Included context about your use case for feature requests
+
+  Our maintainers will review your issue soon. We appreciate your contribution to making Seko Web better! 🚀
+
+# Welcome message for first-time pull request contributors
+newPRWelcomeComment: >
+  👏 Congratulations on creating your first pull request in the Seko Web repository!
+
+  We're excited to review your contribution. Please make sure you've:
+  - Read our CONTRIBUTING.md guidelines
+  - Signed our Contributor License Agreement (if applicable)
+  - Added tests for new features or bug fixes
+  - Updated documentation if needed
+  - Ensured code follows our style guidelines
+
+  Our maintainers will review your PR and provide feedback. Thank you for helping improve Seko Web! 💡
+
+# Congratulatory message for first PR merge
+firstPRMergeComment: >-
+  🎊 Congratulations on merging your first pull request!
+
+  You're now an official contributor to Seko Web. Your hard work and dedication help make this project better for everyone.
+
+  Some next steps:
+  - Join our community discussions
+  - Check out other open issues
+  - Consider becoming a regular contributor
+
+  Once again, thank you for your valuable contribution! 🌟
+
+# Additional configuration for repository interactions
+requestReviewFromContributor: true
+requireReviewFromContributor: false
+
+# Automatic label configuration
+labelPRBasedOnBranchName: true
+labelPRBasedOnIssueLabels: true
+
+# Automatic project board integration
+autoAssignProject: true
+projectBoards:
+  - name: Development Roadmap
+    column: In Progress
